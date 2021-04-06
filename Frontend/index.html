@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CoinFlip</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid" style="padding-top: 3%; padding-bottom: 3%;">
+      <div class="container">
+        <h1 class="display-4">CoinFlip</h1>
+        <p class="lead">Stay flipping...</p>
+      </div>
+    </div>
+    <div class="container">
+
+        <h2 style="padding-bottom: 20px">Choose a side</h2>
+        <div class="row">
+          <div class="col-sm">
+              <img src="pics/heads.jpg" alt="heads" width="50%" id="heads" style="cursor: pointer; display: none;">
+              <img src="pics/heads_sw.jpg" alt="headsSw" width="50%" id="heads_sw" style="cursor: pointer;">
+          </div>
+          <div class="col-sm">
+              <img src="pics/tails.jpg" alt="tails" width="50%" id="tails" style="cursor: pointer; display: none">
+              <img src="pics/tails_sw.jpg" alt="tailsSw" width="50%" id="tails_sw" style="cursor: pointer;">
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+
+        <div style="padding-top: 20px; display: inline-block">Selected side: </div>
+        <div id="selectedSide" style="padding-top: 20px; display: inline-block"></div>
+        <div id="flippingText" style="padding-top: 20px; padding-left: 10px; display: none">Flipping...</div>
+        <div id="resultText" style="padding-top: 20px; padding-left: 10px; display: none">Result:</div>
+        <div id="result" style="padding-top: 20px; padding-left: 10px; font-weight: bold; display: inline-block"></div>
+
+      <div>
+        <h2 style="padding-top: 50px; padding-bottom: 20px">Place your bet</h2>
+        <div class="row">
+          <div class="col-sm">
+            <input type="input" id="valueInput" class="form-control" input autocomplete="off" placeholder="0.001 - 1 Ether">
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+        <button type="button" id="startButton" class="btn btn-secondary btn-lg" style="margin-top: 20px;">Start flipping</button>
+        <div id="errorText" style="padding-top: 20px; display: block; color: red;"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
